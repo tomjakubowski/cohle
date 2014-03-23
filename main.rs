@@ -10,6 +10,7 @@ mod test_helpers {
 mod point3d {
     use std::f64::{pow, sqrt};
 
+    #[deriving(Show,Eq)]
     pub struct Point(f64, f64, f64);
     pub static origin: Point = Point(0f64, 0f64, 0f64);
 
@@ -34,6 +35,7 @@ mod point3d {
 pub fn main() {
     use point3d::{Point, dist};
 
-    let p = Point(1f64, 1f64, 0f64);
-    println!("the uhh distance between two points is {}", dist(p, point3d::origin));
+    let p = Point(1.123f64, 1.542f64, 0f64);
+    println!("the uhh distance between two points {} and {} \
+              is {}", p, point3d::origin, dist(p, point3d::origin));
 }
