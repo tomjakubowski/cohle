@@ -1,3 +1,0 @@
-: main.rs |> rustc %f -o %o |> bin/cohle
-: main.rs |> rustc %f --test -o %o |> bin/test
-: bin/test |> bin/test |>
